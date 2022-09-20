@@ -1,0 +1,20 @@
+---
+spring.config.activate.on-profile:
+  - local
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: 127.0.0.1:9093
+    listener:
+      ack-mode: MANUAL_IMMEDIATE
+      type: single
+---
+spring.config.activate.on-profile:
+  - dev
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: b-1.kpsdevmsk.q26wzx.c2.kafka.ap-northeast-2.amazonaws.com:9092,b-2.kpsdevmsk.q26wzx.c2.kafka.ap-northeast-2.amazonaws.com:9092
+    listener:
+      ack-mode: MANUAL_IMMEDIATE
+      type: single

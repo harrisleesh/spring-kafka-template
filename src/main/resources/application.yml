@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: spring-kafka
+  profiles:
+    active: local
+  config:
+    import:
+      - spring-kafka-producer.yml
+      - spring-kafka-consumer.yml

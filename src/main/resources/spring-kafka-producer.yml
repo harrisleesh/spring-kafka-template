@@ -1,0 +1,18 @@
+---
+spring.config.activate.on-profile:
+  - local
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: 127.0.0.1:9093
+#      bootstrap-servers: b-1.kpsdevmsk.q26wzx.c2.kafka.ap-northeast-2.amazonaws.com:9092,b-2.kpsdevmsk.q26wzx.c2.kafka.ap-northeast-2.amazonaws.com:9092
+      acks: all
+
+---
+spring.config.activate.on-profile:
+  - dev
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: b-1.kpsdevmsk.q26wzx.c2.kafka.ap-northeast-2.amazonaws.com:9092,b-2.kpsdevmsk.q26wzx.c2.kafka.ap-northeast-2.amazonaws.com:9092
+      acks: all
